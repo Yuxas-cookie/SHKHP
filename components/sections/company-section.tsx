@@ -85,17 +85,6 @@ export function CompanySection() {
                 <br />
                 リバーサイド千里山 201号室
               </p>
-              <div className="mt-6 sm:mt-8">
-                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                  最新のテクノロジーと快適な環境で、
-                  <br />
-                  創造性を最大限に引き出せる
-                  <br />
-                  カジュアルなワークスペースを
-                  <br />
-                  ご用意しています。
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
