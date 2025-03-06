@@ -57,7 +57,7 @@ export function ContactSection() {
               </div>
               <div className="flex items-center space-x-4 sm:space-x-6 group">
                 <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-black transition-transform group-hover:scale-110" />
-                <span className="text-gray-600 text-base sm:text-lg">〒565-0842 大阪府吹田市千里山東２丁目４−３ リバーサイド千里山 1階</span>
+                <span className="text-gray-600 text-base sm:text-lg">〒565-0842 大阪府吹田市千里山東２丁目４−３ リバーサイド千里山 201号室</span>
               </div>
             </div>
           </motion.div>
