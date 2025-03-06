@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { MapPin } from 'lucide-react'
+import { MapPin, User } from 'lucide-react'
 
 export function CompanySection() {
   const fadeIn = {
@@ -42,7 +42,7 @@ export function CompanySection() {
           企業情報
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -61,29 +61,41 @@ export function CompanySection() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="order-1 md:order-2"
+            className="order-1 md:order-2 space-y-8"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <MapPin className="w-8 h-8 sm:w-10 sm:h-10 text-black flex-shrink-0" />
-              <h3 className="text-2xl sm:text-3xl font-bold text-black">所在地</h3>
-            </div>
-            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed">
-              〒565-0842
-              <br />
-              大阪府吹田市千里山東２丁目４−３
-              <br />
-              リバーサイド千里山 1階
-            </p>
-            <div className="mt-6 sm:mt-8">
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                最新のテクノロジーと快適な環境で、
-                <br />
-                創造性を最大限に引き出せる
-                <br />
-                カジュアルなワークスペースを
-                <br />
-                ご用意しています。
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <User className="w-8 h-8 sm:w-10 sm:h-10 text-black flex-shrink-0" />
+                <h3 className="text-2xl sm:text-3xl font-bold text-black">代表者</h3>
+              </div>
+              <p className="text-gray-600 text-lg sm:text-xl leading-relaxed">
+                代表取締役　片山弘
               </p>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <MapPin className="w-8 h-8 sm:w-10 sm:h-10 text-black flex-shrink-0" />
+                <h3 className="text-2xl sm:text-3xl font-bold text-black">所在地</h3>
+              </div>
+              <p className="text-gray-600 text-lg sm:text-xl leading-relaxed">
+                〒565-0842
+                <br />
+                大阪府吹田市千里山東２丁目４−３
+                <br />
+                リバーサイド千里山 201号室
+              </p>
+              <div className="mt-6 sm:mt-8">
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                  最新のテクノロジーと快適な環境で、
+                  <br />
+                  創造性を最大限に引き出せる
+                  <br />
+                  カジュアルなワークスペースを
+                  <br />
+                  ご用意しています。
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
