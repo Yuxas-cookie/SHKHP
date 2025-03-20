@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Button } from '@/components/ui/button'
-import { Mail, MapPin } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
 export function ContactSection() {
   const fadeIn = {
@@ -43,29 +43,11 @@ export function ContactSection() {
           お問い合わせ
         </motion.h2>
         
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-black">お気軽にご連絡ください</h3>
-            <div className="space-y-6 sm:space-y-8">
-              <div className="flex items-center space-x-4 sm:space-x-6 group">
-                <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-black transition-transform group-hover:scale-110" />
-                <span className="text-gray-600 text-base sm:text-lg">sekaino.hiroshi34@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-4 sm:space-x-6 group">
-                <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-black transition-transform group-hover:scale-110" />
-                <span className="text-gray-600 text-base sm:text-lg">〒565-0842 大阪府吹田市千里山東２丁目４−３ リバーサイド千里山 201号室</span>
-              </div>
-            </div>
-          </motion.div>
-          
+        <div className="max-w-xl mx-auto">
           <motion.form
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-6 sm:space-y-8"
           >
             <div>
